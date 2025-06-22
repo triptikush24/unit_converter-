@@ -9,7 +9,6 @@ public class Home extends JFrame {
     public JButton length, mass, volume, time;
 
     public static void main(String[] args) {
-        // Use system look and feel for modern appearance
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (Exception e) {
@@ -21,15 +20,13 @@ public class Home extends JFrame {
         mainframe = new JFrame("Unit Converter Pro");
         mainframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mainframe.setSize(500, 400);
-        mainframe.setLocationRelativeTo(null); // Center on screen
+        mainframe.setLocationRelativeTo(null); 
 
-        // Main panel with vertical layout
         JPanel mainPanel = new JPanel();
         mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
         mainPanel.setBackground(new Color(245, 245, 250));
         mainPanel.setBorder(BorderFactory.createEmptyBorder(30, 30, 30, 30));
 
-        // Title label
         JLabel title = new JLabel("Unit Converter Pro");
         title.setAlignmentX(Component.CENTER_ALIGNMENT);
         title.setFont(new Font("Segoe UI", Font.BOLD, 28));
@@ -37,7 +34,6 @@ public class Home extends JFrame {
         mainPanel.add(title);
         mainPanel.add(Box.createRigidArea(new Dimension(0, 30)));
 
-        // Button panel
         JPanel buttonPanel = new JPanel();
         buttonPanel.setLayout(new GridLayout(2, 2, 20, 20));
         buttonPanel.setOpaque(false);
